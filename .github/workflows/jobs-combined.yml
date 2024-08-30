@@ -1,4 +1,4 @@
-name: Our Jobs
+name: Our Jobs Combined
 on: push
 jobs:
   hello:
