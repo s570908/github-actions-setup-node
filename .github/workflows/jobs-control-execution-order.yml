@@ -1,4 +1,4 @@
-name: Our Jobs
+name: Our Jobs Control-execution-order
 on: push
 jobs:
   job1:
