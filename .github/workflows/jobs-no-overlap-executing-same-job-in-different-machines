@@ -1,0 +1,13 @@
+name: Our Jobs No-overlap-Executing-same-job-in-different-machines
+on: push
+jobs:
+  date:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - run: date
