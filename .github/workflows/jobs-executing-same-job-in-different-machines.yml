@@ -1,0 +1,15 @@
+name: Our Jobs Executing-same-job-in-different-machines
+on: push
+jobs:
+  date1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
+  date2:
+    runs-on: windows-latest
+    steps:
+      - run: date
+  date3:
+    runs-on: macos-latest
+    steps:
+      - run: date
