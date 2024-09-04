@@ -1,0 +1,11 @@
+name: Our Jobs Summary
+on: push
+jobs:
+  todos:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## 할일 목록" >> $GITHUB_STEP_SUMMARY
+          echo "- 자기" >> $GITHUB_STEP_SUMMARY
+          echo "- 놀기" >> $GITHUB_STEP_SUMMARY
+          echo "- 먹기" >> $GITHUB_STEP_SUMMARY
