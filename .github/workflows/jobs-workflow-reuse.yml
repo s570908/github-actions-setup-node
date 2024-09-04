@@ -1,0 +1,23 @@
+name: Our Deployment
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/checkout@v3
+      - name: set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+      - name: install
+        run: npm ci
+      - name: test
+        run: npm test
+      - name: build
+        run: npm run build
+      - name: deploy
+        run: npm run deploy
